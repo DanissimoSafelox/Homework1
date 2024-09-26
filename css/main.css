@@ -4,51 +4,52 @@
 
 }
 
-*{
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Inter;
 }
 
-html, body{
+html,
+body {
     height: 100%;
 
 }
 
-.wrapper{
+.wrapper {
     height: 100%;
     margin: 0 auto;
 }
 
-.emailAddress{
-    /* Content-box — это значение по умолчанию. В этом случае свойства width/height обозначают то, что находится внутри padding.
-Border-box — значения width/height задают высоту/ширину всего элемента.*/
-    box-sizing:content-box; 
-    padding-top: 28px;
-    padding-left: 252px;
-    width: 300px;
+.emailAddress {
+    display: flex;
+    align-items: center;
+    gap: 7px;
 
-}
 
-.EnvelopeOpen{
-    background: url(../images/EnvelopeOpen.png) no-repeat center;
-    height: 28px;
-    width: 28px;
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-address{
-    display: inline-block;
     font-style: normal;
     font-size: 14px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 7px;
+
+    &::before {
+        content: '';
+        display: block;
+        background: url(../images/EnvelopeOpen.png) no-repeat center;
+        height: 28px;
+        width: 28px;
+    }
+
 }
 
-.header{
-    height: 750px;
-    background: black url(../images/Header.png) no-repeat center;
+.page {
+    background: black url(../images/Header.png) no-repeat center/cover;
     color: white;
+    height: 750px;
+
+}
+
+.header {
+    padding: 28px 100px;
 }
