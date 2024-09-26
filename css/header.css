@@ -1,0 +1,44 @@
+.header {
+	padding: 28px 0;
+
+	& .header__hr {
+		margin: 20px 0;
+	}
+
+	& .header__content {
+		padding: 0 100px;
+		display: flex;
+		justify-content: space-between;
+		gap: 24px;
+	}
+}
+
+.contacts__links {
+	display: flex;
+	align-items: center;
+}
+
+.contacts__links-hr {
+	margin: 0 24px 0 32px;
+}
+
+.contacts__links-list {
+	display: flex;
+
+	gap: 16px;
+
+	& li {
+		flex-basis: 40px;
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+
+	& .nav__menu {
+		display: flex;
+		text-transform: uppercase;
+		align-items: center;
+	}
+}
