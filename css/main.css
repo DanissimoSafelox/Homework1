@@ -15,8 +15,34 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100dvh;
+    min-width: 100dvw;
+}
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-primary-800);
+    text-align: center;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-gray-400);
+    text-align: center;
+
+}
+
+.title {
+    padding-left: 30dvh;
+    padding-right: 30dvh;
 }
 
 .wrapper {
@@ -24,32 +50,28 @@ body {
     margin: 0 auto;
 }
 
-.emailAddress {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-
-    font-style: normal;
-    font-size: 14px;
-
-    &::before {
-        content: '';
-        display: block;
-        background: url(../images/EnvelopeOpen.png) no-repeat center;
-        height: 28px;
-        width: 28px;
+.logo {
+    & svg {
+        width: 120px;
+        height: 44px;
     }
-
 }
 
 .page {
     background: black url(../images/Header.png) no-repeat center/cover;
-    color: white;
-    height: 750px;
-
+    height: 100dvh;
 }
 
-.header {
-    padding: 28px 100px;
+.hr {
+    background-color: var(--color-gray-white);
+
+    &.hr--v {
+        height: 100%;
+        width: 1px;
+    }
+
+    &.hr--h {
+        width: 100%;
+        height: 1px;
+    }
 }
