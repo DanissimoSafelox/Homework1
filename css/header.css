@@ -1,4 +1,11 @@
+@font-face {
+	font-family: Public-Sans;
+	src: url(../fonts/PublicSans/PublicSans-VariableFont_wght.ttf);
+
+}
+
 .header {
+	color: var(--color-gray-white);
 	padding: 28px 0;
 
 	& .header__hr {
@@ -10,6 +17,23 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 24px;
+	}
+
+	& .header__title {
+		padding-top: 150px;
+		padding-bottom: 150px;
+
+		& .header__title__main_title {
+			color: var(--color-gray-white);
+			font-size: 52px;
+			font-family: Public-Sans;
+		}
+
+		& .header__title__subtitle {
+			color: var(--color-primary-50);
+		}
+
+
 	}
 }
 
@@ -40,5 +64,7 @@
 		display: flex;
 		text-transform: uppercase;
 		align-items: center;
+
+
 	}
 }

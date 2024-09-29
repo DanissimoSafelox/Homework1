@@ -24,6 +24,27 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-primary-800);
+    text-align: center;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-gray-400);
+    text-align: center;
+
+}
+
+.title {
+    padding-left: 30dvh;
+    padding-right: 30dvh;
+}
+
 .wrapper {
     height: 100%;
     margin: 0 auto;
@@ -38,12 +59,11 @@ a {
 
 .page {
     background: black url(../images/Header.png) no-repeat center/cover;
-    color: var(--color-white);
-    height: 750px;
+    height: 100dvh;
 }
 
 .hr {
-    background-color: var(--color-white);
+    background-color: var(--color-gray-white);
 
     &.hr--v {
         height: 100%;
