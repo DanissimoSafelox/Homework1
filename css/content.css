@@ -1,14 +1,10 @@
-.content {
-    background: var(--color-gray-white);
-}
-
 .advence_search {
+    position: relative;
     width: min-content;
-    margin: 0 auto;
+    margin: 0 auto 0;
     padding: 32px 64px;
     background-color: var(--color-gray-white);
     border-radius: 7px;
-    justify-content: space-evenly;
     box-shadow: 0 0 400px -20px var(--color-primary-400);
 
     & .advence_search__choice_type {
@@ -21,45 +17,44 @@
         justify-content: center;
         gap: 10px;
 
-        & .advence_search__choice_type__button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+       
     }
 
     & .advence_search__form {
-        display: flex;
-        align-items: center;
-
-        & .advence_search__form__element {
-
-            &:not(:last-child) {
-                border-right: 1px solid black;
-            }
-        }
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
 
         & .advence_search__hr {
-            height: 64px;
-            margin: 0 0;
             background-color: var(--color-gray-black);
         }
 
-        & .advence_search__form__element__label {
+        & .advence_search__form__block {
             display: flex;
-            gap: 16px;
-            flex-direction: column;
+            gap: 32px;
+            justify-content: space-between;
+        }
+
+        & .advence_search__form__submit {
+            align-self: center;
+            justify-self: end;
+            margin-left: 32px;
 
         }
 
-
-        /* & li {
+        & .advence_search__form__element {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+            color: var(--color-primary-700);
 
-            &.advence_search__form__fill__element {
-                flex-basis: 150px;
+            & select {
+                border: none;
+                padding: 0;
+                margin-left: -.2em;
+
             }
-        } */
+        }
     }
 }

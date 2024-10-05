@@ -57,12 +57,24 @@ a {
 }
 
 .start_screen {
-    background: black url(../images/Header.png) no-repeat center/cover;
-    height: 70dvh;
+    position: relative;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: calc(133px/2);
+    gap: 150px;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: black url(../images/Header.png) no-repeat center/cover;
+        inset: 0 0 133px 0;
+        z-index: -1;
+    }
 
     .title {
-        padding-top: 150px;
-        padding-bottom: 150px;
 
         & h2 {
             color: var(--color-gray-white);
@@ -73,11 +85,8 @@ a {
         & h3 {
             color: var(--color-primary-50);
         }
-
-
     }
 }
-
 
 
 .logo {
@@ -96,7 +105,7 @@ a {
     }
 
     &.hr--h {
-        width: 100%;
+        min-width: 100%;
         height: 1px;
     }
 }
