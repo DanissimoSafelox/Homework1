@@ -10,12 +10,13 @@
     <link type="text/css" rel="stylesheet" href="./css/main.css">
     <link type="text/css" rel="stylesheet" href="./css/button.css">
     <link type="text/css" rel="stylesheet" href="./css/header.css">
+    <link type="text/css" rel="stylesheet" href="./css/content.css">
     <title>Homework</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <section class="page">
+        <section class="start_screen">
             <header class="header">
                 <footer class="header__content">
                     <a href="mailto:test@mail.ru" class="button button--with-icon">
@@ -154,18 +155,77 @@
                         <button class="button button--md button--ghost">Add Listing</button>
                     </section>
                 </section>
-                <div class="header__title title">
-                    <h2 class="header__title__main_title">Find Your Dream Home</h2>
-                    <h3 class="header__title__subtitle">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                        posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat.</h3>
-                </div>
-
             </header>
-            <main class="content">
-                Контент
-            </main>
-        </section <footer class="footer">
-        Низ
+            <section class="title">
+                <h2>Find Your Dream Home</h2>
+                <h3>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                    posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat.</h3>
+            </section>
+
+        </section>
+        <main class="content">
+            <section class="advence_search">
+                <div class="advence_search__choice_type">
+                    <div class="advence_search__choice_type__button-container">
+                        <input class="button button--md button--choice--state" type="radio" name="button"
+                            checked id="button--choice--rent" value="1" hidden>
+                        <label class="button button--md button--choice" for="button--choice--rent">Rent</label>
+                    </div>
+                    <div class="advence_search__choice_type__button-container">
+                        <input class="button button--md button--choice--state" type="radio" name="button"
+                            id="button--choice--sale" value="2" hidden>
+                        <label class="button button--md button--choice" for="button--choice--sale">
+                            Sale
+                        </label>
+                    </div>
+                </div>
+                <form class="advence_search__form" method="post">
+                    <div class="advence_search__form__element">
+                        <label for="location" class="advence_search__form__element__label">
+                            <span>Location</span>
+                            <select type="text" id="location" required>
+                                <option disabled value="" selected>Select your city</option>
+                                <option value="city1">City1</option>
+                                <option value="city2">City2</option>
+                            </select>
+                        </label>
+
+                    </div>
+                    <div class="advence_search__form__element">
+                        <label for="property_type" class="advence_search__form__element__label">
+                            <span>Property Type</span>
+                            <select type="text" id="property_type">
+                                <option disabled value="" selected>Select property type</option>
+                                <option value="prop1">Property1</option>
+                                <option value="prop2">Property2</option>
+                            </select>
+                        </label>
+
+                    </div>
+                    <div class="advence_search__form__element">
+                        <label for="rent_range" class="advence_search__form__element__label">
+                            <span>Rent Range</span>
+                            <select type="text" id="rent_range">
+                                <option disabled value="" selected> Select rent range</option>
+                                <option value="range1">RentRange1</option>
+                                <option value="range2">RentRange2</option>
+                            </select>
+
+                        </label>
+
+                    </div>
+                    <button class="button button--md button--content">Search</button>
+                </form>
+            </section>
+        </main>
+        <div class="title">
+            <h2>Find Your Dream Home</h2>
+            <h3>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat.</h3>
+        </div>
+
+        <footer class="footer">
+            Низ
         </footer>
 
     </div>

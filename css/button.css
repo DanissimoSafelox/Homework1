@@ -51,6 +51,41 @@
 			width: 28px;
 		}
 	}
+
+
+	&.button--choice--state {
+		display: none;
+	}
+
+	&.button--choice {
+		cursor: pointer;
+		background: var(--color-gray-white);
+		color: var(--color-primary-400);
+		border: none;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: none;
+			width: 18px;
+			height: 9px;
+			top: calc(100% - 1px);
+			left: 50%;
+			clip-path: polygon(50% 100%, 0 0, 100% 0);
+			transform: translateX(-50%);
+		}
+	}
+
+	&.button--choice--state:checked + .button--choice::before {
+		background-color: var(--color-primary-500);
+		display: block;
+	}
+
+	&.button--choice--state:checked+&.button--choice {
+		background: var(--color-primary-500);
+		color: var(--color-gray-white);
+	}
 }
 
 .icon-button {
