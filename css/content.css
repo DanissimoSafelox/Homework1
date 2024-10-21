@@ -17,7 +17,7 @@
         justify-content: center;
         gap: 10px;
 
-       
+
     }
 
     & .advence_search__form {
@@ -57,4 +57,99 @@
             }
         }
     }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & container--city-cards {
+        display: flex;
+
+    }
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-gap: 24px;
+    position: relative;
+
+    >.card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 24px;
+
+        &:hover {
+            >.card__button {
+                opacity: 1;
+            }
+        }
+
+        >.card__button {
+            opacity: 0;
+            transition: all 200ms ease;
+            position: absolute;
+            display: flex;
+            inset: 0;
+            margin: auto;
+            border: 1px solid var(--color-gray-white);
+            color: var(--color-gray-white);
+            font-size: 16px;
+            width: max-content;
+
+
+        }
+
+        >.card__background-image {
+            position: absolute;
+            display: flex;
+            inset: 0;
+            margin: auto;
+            z-index: -1;
+        }
+
+        >.card__Map-pin {
+            margin-top: auto;
+            width: 24px;
+            height: 24px;
+
+        }
+
+
+        &.card--cities {
+            display: flex;
+            width: 424px;
+            height: 241px;
+
+            &.card--big {
+                width: 872px;
+                grid-column-end: span 2;
+
+            }
+
+            >.card__city-name {
+                margin-bottom: 11px;
+                color: var(--color-gray-white);
+                font-weight: 600;
+                font-size: 24px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            >.card__num-listings {
+                color: var(--color-gray-white);
+                font-size: 16px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    &.cards-wrapper--cities-items {
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    }
+
+
 }

@@ -19,7 +19,7 @@
 .button {
 	border: none;
 	height: min-content;
-	
+
 	&.button--clear {
 		&:hover {
 			font-weight: 800;
@@ -43,6 +43,10 @@
 			background: rgba(255, 255, 255, .2);
 			transition: background ease-in-out .3s;
 		}
+	}
+
+	&.button--popup {
+		background: none;
 	}
 
 	&.button--md {
@@ -84,7 +88,7 @@
 		}
 	}
 
-	&.button--choice--state:checked + .button--choice::before {
+	&.button--choice--state:checked+.button--choice::before {
 		background-color: var(--color-primary-500);
 		display: block;
 	}
@@ -96,9 +100,9 @@
 }
 
 .icon-button {
-	min-width: 32px;
-	min-height: 32px;
 	color: inherit;
+	min-width: 24px;
+	min-height: 24px;
 
 	&.icon-button--sm {
 		padding: 12px;
