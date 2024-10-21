@@ -45,8 +45,10 @@
 		}
 	}
 
-	&.button--popup {
+	&.button--popup  {
 		background: none;
+		opacity: 0;
+        transition: opacity 200ms ease;
 	}
 
 	&.button--md {
