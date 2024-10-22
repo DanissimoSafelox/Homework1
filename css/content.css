@@ -63,7 +63,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-bottom: 100px; */
+    padding-left: 10%;
+    padding-right: 10%;
 
     >.title {
         padding-top: 100px;
@@ -130,19 +131,18 @@
     grid-gap: 24px;
     position: relative;
 
-    >.card {
+    .card {
         display: flex;
         position: relative;
         flex-direction: column;
 
-
         &:hover {
-            >.card__button {
+            .card__button {
                 opacity: 1;
             }
         }
 
-        >.card__button {
+        .card__button {
             position: absolute;
             display: flex;
             inset: 0;
@@ -155,19 +155,21 @@
 
         }
 
-        >.card__background-image {
+        & .card__background-image {
             position: absolute;
-            display: flex;
-            inset: 0;
-            margin: auto;
+            top: 0;
             z-index: -1;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: right;
         }
 
         .card__Map-pin--container {
             display: flex;
-            margin-top: auto;
+            align-self: end;
 
-            >.card__Map-pin {
+            & .card__Map-pin {
                 width: 24px;
                 height: 24px;
 
@@ -175,7 +177,7 @@
         }
 
 
-        >.card__sticker-list {
+        & .card__sticker-list {
             position: absolute;
             display: flex;
             top: 17px;
@@ -184,7 +186,7 @@
             font-size: 15px;
 
 
-            >.card__sticker-list__sticker {
+            & .card__sticker-list__sticker {
                 background-color: var(--color-primary-500);
                 color: var(--color-gray-white);
                 padding: 10px 13px;
@@ -197,19 +199,20 @@
         }
 
         &.card--cities {
-            display: flex;
-            width: 424px;
-            height: 241px;
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            gap: 10px;
+            height: 240px;
             padding: 24px;
+            overflow: hidden;
+            border-radius: 8px;
 
             &.card--cities--big {
-                width: 872px;
-                grid-column-end: span 2;
+                grid-column: span 2;
 
             }
 
-            >.card--cities__city-name {
-                margin-bottom: 11px;
+            & .card--cities__city-name {
                 color: var(--color-gray-white);
                 font-weight: 600;
                 font-size: 24px;
@@ -217,7 +220,7 @@
                 padding-bottom: 4px;
             }
 
-            >.card--cities__num-listings {
+            & .card--cities__num-listings {
                 color: var(--color-gray-white);
                 font-size: 16px;
                 padding-top: 4px;
@@ -357,7 +360,8 @@
     }
 
     &.cards-wrapper--cities-items {
-        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     &.cards-wrapper--home-act {
@@ -371,10 +375,7 @@
 
     &.cards-wrapper--home-scroll-list {
         display: flex;
-
     }
-
-
 }
 
 .footer {
