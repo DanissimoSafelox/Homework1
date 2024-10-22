@@ -19,6 +19,10 @@ body {
     min-width: 100dvw;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 address{
     font-style: normal;
 }
