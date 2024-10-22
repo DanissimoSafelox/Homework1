@@ -3,7 +3,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 6px;
+	border-radius: 4px;
 
 	color: inherit;
 	text-decoration: none;
@@ -45,14 +45,18 @@
 		}
 	}
 
-	&.button--popup  {
+	&.button--popup {
 		background: none;
 		opacity: 0;
-        transition: opacity 200ms ease;
+		transition: opacity 200ms ease;
 	}
 
 	&.button--md {
 		padding: 12px 24px;
+	}
+
+	&.button--mini {
+		padding: 10px 13px;
 	}
 
 	&.button--with-icon {

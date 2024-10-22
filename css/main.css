@@ -97,7 +97,7 @@ a {
 }
 
 .hr {
-    background-color: var(--color-gray-white);
+    /* background-color: var(--color-gray-white); */
 
     &.hr--v {
         height: 100%;

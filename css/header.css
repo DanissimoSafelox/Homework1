@@ -10,6 +10,7 @@
 
 	& .header__hr {
 		margin: 20px 0;
+		background-color: var(--color-gray-white);
 	}
 
 	& .header__content {

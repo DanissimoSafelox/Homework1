@@ -96,7 +96,7 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        padding: 24px;
+
 
         &:hover {
             >.card__button {
@@ -136,8 +136,9 @@
             display: flex;
             width: 424px;
             height: 241px;
+            padding: 24px;
 
-            &.card--big {
+            &.card--cities--big {
                 width: 872px;
                 grid-column-end: span 2;
 
@@ -163,6 +164,7 @@
         &.card--home-act {
             gap: 24px;
             width: 312px;
+            padding: 24px;
 
             >.card--home-act__type {
                 color: var(--color-gray-700);
@@ -192,15 +194,77 @@
             }
         }
 
-        &.card--home-variant{
-            
-            >.card--home-variant__place-info{
-                background-color: aliceblue;
+        &.card--home-variant {
+            box-shadow: 0 0 40px -20px var(--color-primary-400);
+            border-radius: 6px;
+
+
+            >.card--home-variant__button-list {
+                position: absolute;
+                display: flex;
+                top: 17px;
+                left: 17px;
+                gap: 10px;
+                font-size: 15px;
             }
 
-            >.card--home-variant-hr{
-                
-                background-color: var(--color-gray-black)
+            >.card--home-variant__content {
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+
+                >.card--home-variant__content__title {
+                    font-weight: 500;
+                    font-size: 22px;
+                    color: var(--color-gray-700);
+                }
+
+                >.card--home-variant__content__cost {
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: var(--color-primary-500);
+                }
+
+                >.card--home-variant__place-info {
+                    display: flex;
+                    gap: 24px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: var(--color-gray-500);
+
+                    >.card--home-variant__place-info__element {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                    }
+
+                }
+
+                >.card--home-variant-hr {
+                    background-color: var(--color-gray-black)
+                }
+
+                >.card--home-variant__footer-block {
+                    display: flex;
+                    justify-content: space-between;
+
+                    >.card--home-variant__footer-block__social-profile {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                        font-weight: 500;
+                        font-size: 20px;
+                        color: var(--color-gray-700);
+                    }
+
+                    >.card--home-variant__footer-block__socials {
+                        display: flex;
+                        gap: 13px;
+                    }
+
+                }
+
             }
         }
     }
@@ -213,10 +277,10 @@
         grid-template: 1fr / repeat(4, 1fr);
     }
 
-    &.cards-wrapper--home-variant{
+    &.cards-wrapper--home-variant {
         grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        margin-bottom: 32px;
     }
 
 
 }
-
