@@ -230,7 +230,6 @@
 
         &.card--home-act {
             gap: 24px;
-            width: 312px;
             padding: 24px;
 
             >.card--home-act__type {
@@ -365,7 +364,7 @@
     }
 
     &.cards-wrapper--home-act {
-        grid-template: 1fr / repeat(4, 1fr);
+        grid-template-columns: repeat(4, minmax(200px, 300px));
     }
 
     &.cards-wrapper--home-variant {
