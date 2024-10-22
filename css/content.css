@@ -261,9 +261,10 @@
         }
 
         &.card--home-variant {
+            display: grid;
+            grid-template-rows: auto 1fr;
             box-shadow: 0 0 40px -20px var(--color-primary-400);
             border-radius: 6px;
-
 
             >.card--home-variant__button-list {
                 position: absolute;
@@ -298,11 +299,13 @@
                     font-weight: 500;
                     font-size: 16px;
                     color: var(--color-gray-500);
+                    align-items: center;
 
                     >.card--home-variant__place-info__element {
                         display: flex;
                         gap: 6px;
                         align-items: center;
+                        line-height: 1;
                     }
 
                 }
@@ -368,8 +371,15 @@
     }
 
     &.cards-wrapper--home-variant {
-        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(auto, 400px));
+        justify-content: center;
+        width: 100%;
         margin-bottom: 32px;
+        .card--home-variant__img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
     }
 
     &.cards-wrapper--home-scroll-list {
