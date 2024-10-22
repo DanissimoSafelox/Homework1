@@ -132,6 +132,27 @@
 
         }
 
+        >.card__sticker-list {
+            position: absolute;
+            display: flex;
+            top: 17px;
+            left: 17px;
+            gap: 10px;
+            font-size: 15px;
+            
+
+            >.card__sticker-list__sticker {
+                background-color: var(--color-primary-500);
+                color: var(--color-gray-white);
+                padding: 10px 13px;
+                border-radius: 4px;
+
+                &.card__sticker-list__sticker--hidden{
+                    opacity: 0;
+                }
+            }
+        }
+
         &.card--cities {
             display: flex;
             width: 424px;

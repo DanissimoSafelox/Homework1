@@ -55,10 +55,6 @@
 		padding: 12px 24px;
 	}
 
-	&.button--mini {
-		padding: 10px 13px;
-	}
-
 	&.button--with-icon {
 		display: flex;
 		align-items: center;
