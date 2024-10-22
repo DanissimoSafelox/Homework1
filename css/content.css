@@ -120,7 +120,9 @@
         padding: 150px;
         background-image: url(../images/End_img.png);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-position: left;
+        background-size: cover;
+
         color: var(--color-gray-white);
 
         .title {
@@ -408,11 +410,16 @@
 
 .footer {
     display: flex;
-    justify-content: center;
-    gap: 195px;
+    justify-content: space-between;
+    gap: 30px;
     padding-top: 100px;
     padding-bottom: 50px;
     color: var(--color-primary-500);
+
+    &.container {
+        flex-direction: row;
+        align-items: start;
+    }
 
     >.footer__container,
     >.footer__container--links {
@@ -426,6 +433,9 @@
 
         >.footer__container__section-name {
             margin-top: 24px;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--color-gray-black);
         }
 
         .address {
