@@ -31,6 +31,10 @@
 	&.button--solid {
 		background-color: var(--color-primary-500);
 		color: var(--color-gray-white);
+
+		&:disabled {
+			background-color: var(--color-primary-200);
+		}
 	}
 
 	&.button--ghost {
@@ -53,6 +57,10 @@
 
 	&.button--md {
 		padding: 12px 24px;
+	}
+
+	&.button--mini {
+		padding: 10px;
 	}
 
 	&.button--with-icon {

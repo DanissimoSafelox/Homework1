@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 
     >.title {
         padding-top: 100px;
@@ -72,6 +72,7 @@
     &.container--city-cards {
         padding-top: calc(100px - calc(133px/2));
         display: flex;
+        padding-bottom: 100px;
 
         >.title {
             padding-top: 0;
@@ -80,11 +81,48 @@
 
     &.container--home-act {
         background-color: var(--color-primary-50);
+        padding-bottom: 100px;
     }
 
     /* &.container--home-variant{
 
     } */
+
+    &.container--home-scroll-list {
+        padding-bottom: 100px;
+
+        >.container--home-scroll-list__scroll-buttons {
+            display: flex;
+            margin-top: 32px;
+            gap: 24px;
+        }
+    }
+
+    &.container--end {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        padding: 150px;
+        background-image: url(../images/End_img.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: var(--color-gray-white);
+
+        .title {
+            padding-top: 0;
+            padding-bottom: 32px;
+
+            & h2 {
+                color: var(--color-gray-white);
+                font-size: 52px;
+                font-family: Public-Sans;
+            }
+
+            & h3 {
+                color: var(--color-primary-50);
+            }
+        }
+    }
 }
 
 .cards-wrapper {
@@ -125,12 +163,17 @@
             z-index: -1;
         }
 
-        >.card__Map-pin {
+        .card__Map-pin--container {
+            display: flex;
             margin-top: auto;
-            width: 24px;
-            height: 24px;
 
+            >.card__Map-pin {
+                width: 24px;
+                height: 24px;
+
+            }
         }
+
 
         >.card__sticker-list {
             position: absolute;
@@ -139,7 +182,7 @@
             left: 17px;
             gap: 10px;
             font-size: 15px;
-            
+
 
             >.card__sticker-list__sticker {
                 background-color: var(--color-primary-500);
@@ -147,7 +190,7 @@
                 padding: 10px 13px;
                 border-radius: 4px;
 
-                &.card__sticker-list__sticker--hidden{
+                &.card__sticker-list__sticker--hidden {
                     opacity: 0;
                 }
             }
@@ -288,6 +331,29 @@
 
             }
         }
+
+        &.card--home-scroll-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 312px;
+            height: 425px;
+            padding: 24px;
+
+            >.card--home-scroll-list__footer-block {
+                display: flex;
+                gap: 32px;
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--color-gray-white);
+
+                >.card--home-scroll-list__footer-block__element {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                }
+            }
+        }
     }
 
     &.cards-wrapper--cities-items {
@@ -303,5 +369,72 @@
         margin-bottom: 32px;
     }
 
+    &.cards-wrapper--home-scroll-list {
+        display: flex;
 
+    }
+
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 195px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: var(--color-primary-500);
+
+    >.footer__container,
+    >.footer__container--links {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    >.footer__container--links {
+        max-width: 312px;
+
+        >.footer__container__section-name {
+            margin-top: 24px;
+        }
+
+        .address {
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: var(--color-gray-500);
+            font-size: 16px;
+            gap: 8px;
+
+            >.address__email{
+                margin-top: 8px;
+                color: var(--color-gray-700);
+            }
+        }
+
+        >.contacts__links{
+            >.contacts__links-list{
+                li{
+                    background-color: var(--color-primary-50);
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    >.footer__container{
+        gap: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-gray-500);
+
+        >.footer__container__section-name{
+            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--color-gray-black);
+        }
+    }
 }
